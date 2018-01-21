@@ -1,4 +1,4 @@
-package com.pengdaijun.demo.spring.framework.shiro;
+package com.pengdaijun.demo.spring.framework.entity;
 
 import java.util.Date;
 

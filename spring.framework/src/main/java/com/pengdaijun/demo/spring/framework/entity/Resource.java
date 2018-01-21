@@ -1,4 +1,4 @@
-package com.pengdaijun.demo.spring.framework.shiro;
+package com.pengdaijun.demo.spring.framework.entity;
 
 import javax.persistence.Column;  
 import javax.persistence.Entity;  
