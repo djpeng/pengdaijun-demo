@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpEntity;
@@ -21,6 +22,8 @@ import com.pengdaijun.demo.springmvc.generic.entity.IBaseModel;
 import com.pengdaijun.demo.springmvc.generic.service.IBaseService;
 
 public abstract class AbstractBaseController<T extends IBaseModel, ID extends Serializable> {
+	protected Logger LOG = Logger.getLogger(this.getClass());
+
 	@Autowired
 	IBaseService<T, ID> baseService;
 
@@ -130,5 +133,5 @@ public abstract class AbstractBaseController<T extends IBaseModel, ID extends Se
 		Stream<T> stream = models.stream().limit($top);
 		return new ResponseEntity<Stream<T>>(stream, HttpStatus.OK);
 	}
-	
+
 }

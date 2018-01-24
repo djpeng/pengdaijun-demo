@@ -6,12 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
@@ -21,6 +20,7 @@ import com.pengdaijun.demo.springmvc.generic.util.ParamTransfer;
 @Repository
 @Lazy
 public abstract class AbstractBaseDao<T, ID extends Serializable> implements IBaseDao<T, ID> {
+	protected Logger LOG = Logger.getLogger(this.getClass());
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	private String tableName;
