@@ -30,5 +30,6 @@
 		<module>springmvc.generic</module>
 		<module>spring.framework</module>
 		<module>spring.security</module>
+		<module>spring.jpa</module>
 	</modules>
 </project>
