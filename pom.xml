@@ -31,5 +31,6 @@
 		<module>spring.framework</module>
 		<module>spring.security</module>
 		<module>spring.jpa</module>
+		<module>spring.swagger.autoconfig</module>
 	</modules>
 </project>
